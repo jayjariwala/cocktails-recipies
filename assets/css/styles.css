@@ -1,0 +1,93 @@
+@font-face {
+  font-family: cocktail;
+  src:url(../font/CocktailShaker.ttf);
+}
+
+body{
+  background-color: #c0c0c0;
+  margin: 0;
+  padding: 0;
+  background-color: black !important;
+}
+
+.banner_container
+{
+  width: 100%;
+  height: 165px;
+  background: url('http://www.barrellingtidedistillery.com/images/cocktails.png');
+  background-size: contain;
+  background-color: white;
+}
+.banner-overlay
+{
+  height:165px;
+  width: 100%;
+  background-color: rgba(4,180,255,0.7);
+  position: relative;
+  border-bottom:3px groove rgba(255,186,47,1) ;
+
+}
+.logo{
+    position:absolute;
+    left:50%;
+    bottom: -35%;
+    margin-left: -75px;
+}
+
+.img-circle{
+  border: 2px solid rgba(4,180,255,0.7);
+}
+
+.title
+{
+font-size: 32px;
+font-family: 'cocktail';
+color: rgba(255,186,47,1);
+}
+.main_container
+{
+  margin-top: 65px;
+}
+.add-recipe
+{
+  text-align: center;
+}
+.btn{
+  background-color: black !important;
+  border: 1px groove rgba(255,186,47,1) !important;
+  text-transform: uppercase;
+  color:rgba(255,186,47,1) !important ;
+}
+
+.form input{
+  width: 100%;
+  border-top: none;
+  border-left: none;
+  border-right: none;
+  border-bottom:1px groove rgba(4,180,255,0.7);
+  background-color: black;
+  text-align: center;
+  text-transform: uppercase;
+}
+
+.form{
+  margin-top: 25px;
+}
+.grid-item {
+   width: 150px;
+   margin-bottom: 0px;
+ }
+
+.cover_image img
+{
+  border-bottom: 2px solid rgba(4,180,255,0.7);
+}
+.cocktail
+{
+  background-color: #0C1623;
+  margin-top: 15px;
+}
+.cover_image h4{
+
+
+}
