@@ -15,15 +15,38 @@
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <script type="text/javascript">
-    $(document).ready(function() {
 
-        $('.grid').masonry({
-          // options
-          itemSelector: '.grid-item',
-          columnWidth:150,
-          gutter: 15
-        });
-    })
+
+
+    document.addEventListener( 'DOMContentLoaded', function( event ) {
+        // Do something
+        document.getElementById('add-recipe-form').style.display="none";
+        function loadMasonary() {
+            $('.grid').masonry({
+              // options
+              itemSelector: '.grid-item',
+              columnWidth:150,
+              gutter: 15
+            });
+        }
+        loadMasonary();
+        var add_recipe=document.getElementById('add-recipe');
+        add_recipe.addEventListener('click',function(){
+          var a =document.getElementById('on').className;
+           if (a == "col-sm-12")
+           {
+             document.getElementById('on').classList.remove(a); document.getElementById('on').classList.add("col-sm-9");
+             loadMasonary();
+             document.getElementById('add-recipe-form').style.display="block"
+           }
+           else {
+             document.getElementById('on').classList.remove(a); document.getElementById('on').classList.add("col-sm-12");
+             loadMasonary();
+             document.getElementById('add-recipe-form').style.display="none";
+
+           }
+        })
+    });
 </script>
 
 <body>
@@ -36,9 +59,17 @@
     </div>
     <div class="container">
         <div class="main_container">
+          <div class="row">
+              <div class="col-sm-9">
+                <div class="title">Cocktail Recipes</div>
+              </div>
+              <div class="col-sm-3">
+                <btn class="btn btn-default" id="add-recipe"> Add A Recipe</btn>
+              </div>
+          </div>
             <div class="row">
-                <div class="col-sm-9">
-                    <div class="title">Cocktail Recipes</div>
+                <div class="col-sm-12" id="on">
+
                     <div class="cocktails_container">
                         <!--
                 <div class="row">
@@ -58,68 +89,23 @@
                               <div class="cocktail">
                                 <div class="cover_image">
                                   <img src="http://cdn.liquor.com/wp-content/uploads/2015/03/hub_classic_cocktail_bloodymary.jpg" width="100%" alt="">
-                                  <h4 class="text-center">Martini Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="grid-item">
-                              <div class="cocktail">
-                                <div class="cover_image">
-                                  <img src="http://cdn.liquor.com/wp-content/uploads/2015/03/hub_classic_cocktail_bloodymary.jpg" width="100%" alt="">
-                                  <h4 class="text-center"> aliqua. Ut enim ad minim veniam, quis nostrud exercitationdolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="grid-item">
-                              <div class="cocktail">
-                                <div class="cover_image">
-                                  <img src="http://cdn.liquor.com/wp-content/uploads/2015/03/hub_classic_cocktail_bloodymary.jpg" width="100%" alt="">
-                                  <h4 class="text-center">Martini Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="grid-item">
-                              <div class="cocktail">
-                                <div class="cover_image">
-                                  <img src="http://cdn.liquor.com/wp-content/uploads/2015/03/hub_classic_cocktail_bloodymary.jpg" width="100%" alt="">
-                                  <h4 class="text-center">Martini Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="grid-item">
-                              <div class="cocktail">
-                                <div class="cover_image">
-                                  <img src="http://cdn.liquor.com/wp-content/uploads/2015/03/hub_classic_cocktail_bloodymary.jpg" width="100%" alt="">
-                                  <h4 class="text-center">Martini Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="grid-item">
-                              <div class="cocktail">
-                                <div class="cover_image">
-                                  <img src="http://cdn.liquor.com/wp-content/uploads/2015/03/hub_classic_cocktail_bloodymary.jpg" width="100%" alt="">
-                                  <h4 class="text-center">Martini Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
-                                </div>
-                              </div>
-                            </div>
-                            <div class="grid-item">
-                              <div class="cocktail">
-                                <div class="cover_image">
-                                  <img src="http://cdn.liquor.com/wp-content/uploads/2015/03/hub_classic_cocktail_bloodymary.jpg" width="100%" alt="">
-                                  <h4 class="text-center">Martini Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</h4>
+                                  <h4 class="text-center">Magarita</h3>
+                                  <span class="badge">water</span><span class="badge">Alocohol</span>
                                 </div>
                               </div>
                             </div>
                         </div>
                     </div>
                   </div>
-                    <div class="col-sm-3 add-recipe">
-                        <btn class="btn btn-default">Add a recipe</btn>
-                        <div class="form">
-                            <input type="text" name="imageurl" placeholder="Paste Image URL" />
+                    <div class="col-sm-3 add-recipe" id="add-recipe-form">
 
+                        <div class="form">
+                            <span class="label_text">Image Url:</span>
+                            <input type="text" name="imageurl" class="form_input" />
+                                <span class="label_text">Add Ingredients:</span>
                                 <input type="text" value="Amsterdam,Washington,Sydney,Beijing,Cairo" data-role="tagsinput" />
-                                <textarea name="name" rows="8" cols="30"></textarea>
+                                <span class="label_text">Description:</span>
+                                <textarea name="name"  rows="8" cols="30"></textarea>
                                 <button class="btn btn-default btn-block">Submit</button>
                             </div>
                         </div>

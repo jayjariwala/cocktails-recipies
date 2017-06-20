@@ -65,7 +65,6 @@ color: rgba(255,186,47,1);
   border-left: none;
   border-right: none;
   border-bottom:1px groove rgba(4,180,255,0.7);
-  background-color: black;
   text-align: center;
   text-transform: uppercase;
 }
@@ -73,6 +72,8 @@ color: rgba(255,186,47,1);
 .form{
   margin-top: 25px;
 }
+
+
 .grid-item {
    width: 150px;
    margin-bottom: 0px;
@@ -87,7 +88,52 @@ color: rgba(255,186,47,1);
   background-color: #0C1623;
   margin-top: 15px;
 }
-.cover_image h4{
-
-
+.form textarea{
+border-radius: 5px;
+}
+.bootstrap-tagsinput
+{
+  border-radius: 5px;
+}
+.form button{
+  margin-top: 10px;
+}
+.form_input
+{
+  border-radius: 5px;
+}
+.label_text
+{
+  float: left;
+  color: white;
+  display: block;
+  margin-top:10px;
+}
+.cocktail h4
+{
+  color:white;
+  text-transform: uppercase;
+  font-size: 16px;
+}
+.cocktail .badge
+{
+  margin-left:5px;
+  text-transform: capitalize;
+  margin-bottom: 5px;
+}
+.item
+{
+  width: 40%;
+  margin: 0 auto;
+  margin-top: 30px;
+}
+.desc
+{
+  color: white;
+  text-transform: uppercase;
+}
+.desctiption
+{
+  padding: 0 15px 10px 15px;
+  text-align: justify;
 }
