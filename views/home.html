@@ -1,0 +1,63 @@
+
+
+    <div class="container">
+        <div class="main_container">
+          <div class="row">
+              <div class="col-sm-9">
+                <div class="title">Cocktail Recipes</div>
+              </div>
+              <div class="col-sm-3">
+                <btn class="btn btn-default" id="add-recipe" data-toggle="modal" data-target="#myModal"> Add A Recipe</btn>
+              </div>
+          </div>
+            <div class="row">
+                <div class="col-sm-12" id="on">
+
+                    <div class="cocktails_container">
+                    
+                    <div masonry>
+                        <div class="masonry-brick" ng-repeat="cocktail in cocktails">
+                            <img ng-src="https://images5.alphacoders.com/815/thumb-350-815037.jpg" alt="A masonry brick">
+                        </div>
+                    </div>
+                      
+                    </div>
+                        <!--
+                        <div class="grid" >
+                            <div class="grid-item" ng-repeat="cocktail in cocktails">
+
+                              <div class="cocktail" >
+                                <div class="cover_image">
+                                  <img src="http://cdn.liquor.com/wp-content/uploads/2015/03/hub_classic_cocktail_bloodymary.jpg" width="100%" alt="">
+                                  <h4 class="text-center">Magarita</h4>
+                                  <span class="badge">water</span><span class="badge">Alocohol</span>
+                                </div>
+                              </div>
+                            </div>
+                            
+                        </div>-->
+                    </div> 
+                  </div>
+                    <div id="myModal" class="modal fade" role="dialog">
+                      <div class="modal-dialog">
+
+                        <!-- Modal content-->
+                        <div class="modal-content">
+                          <div class="modal-header">
+                            <button type="button" class="close" data-dismiss="modal">&times;</button>
+                            <h4 class="modal-title">Modal Header</h4>
+                          </div>
+                          <div class="modal-body">
+                            <p>Some text in the modal.</p>
+                            <tags-input ng-model="main.tags"></tags-input>
+                          </div>
+                          <div class="modal-footer">
+                            <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                </div>
+            </div>
+
