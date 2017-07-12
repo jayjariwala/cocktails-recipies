@@ -137,3 +137,36 @@ border-radius: 5px;
   padding: 0 15px 10px 15px;
   text-align: justify;
 }
+label
+{
+  margin-top: 15px;
+}
+.modal-title
+{
+  text-align: center;
+  text-transform: uppercase;
+}
+.add
+{
+  width: 30%;
+}
+
+input.ng-invalid.ng-touched,textarea.ng-invalid.ng-touched,tags-input.ng-invalid.ng-touched
+{
+  border: 1px solid red;
+}
+tags-input.ng-invalid .tags
+{
+  box-shadow: none !important;
+}
+
+.error
+{
+  color: red;
+  text-align: center;
+}
+
+input[disabled="disabled"]{
+  opacity: 0.4;
+  cursor:not-allowed !important;
+}
