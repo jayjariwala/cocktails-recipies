@@ -87,6 +87,7 @@ color: rgba(255,186,47,1);
 {
   background-color: #0C1623;
   margin-top: 15px;
+
 }
 .form textarea{
 border-radius: 5px;
@@ -169,4 +170,15 @@ tags-input.ng-invalid .tags
 input[disabled="disabled"]{
   opacity: 0.4;
   cursor:not-allowed !important;
+}
+
+.search,.title
+{
+  display: inline-block;
+}
+.search
+{
+  margin-left: 20px;
+  text-transform: capitalize;
+  border: none;
 }

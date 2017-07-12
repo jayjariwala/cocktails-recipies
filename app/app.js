@@ -49,6 +49,7 @@ app.controller("formController",['$scope', '$firebaseArray',function($scope, $fi
 			  pic_url : this.url
 			
 		});
+		this.dismiss="modal";
 	}
 
 
