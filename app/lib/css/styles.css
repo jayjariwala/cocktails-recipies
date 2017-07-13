@@ -87,7 +87,7 @@ color: rgba(255,186,47,1);
 {
   background-color: #0C1623;
   margin-top: 15px;
-
+  position: relative;
 }
 .form textarea{
 border-radius: 5px;
@@ -181,4 +181,61 @@ input[disabled="disabled"]{
   margin-left: 20px;
   text-transform: capitalize;
   border: none;
+}
+
+.masonry-brick
+{
+  color: white;
+  width: 210px;
+}
+.cocktail_text
+{
+  padding: 2px 8px;
+}
+
+.cocktails_container a
+{
+  text-decoration:none;
+  color: white;
+}
+.cocktail:hover
+{
+  text-decoration:none;
+  color: white;
+  border:1px solid rgba(255,186,47,1);
+  transition: 0.6s ease-in;
+}
+
+.overlay
+{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0,0,0,0);
+}
+
+.fa-edit,.fa-trash
+{
+  position: absolute;
+  top: 10px;
+}
+.fa-edit
+{
+  left: 15px;
+}
+.fa-trash
+{
+  right: 15px;
+}
+.cocktail:hover .overlay
+{
+  background-color: rgba(0,0,0,0.6);
+}
+
+#drinkTitle_edit
+{
+  width: 80px;
+  display: block;
+  margin:0 auto;
+  height: 14px;
 }

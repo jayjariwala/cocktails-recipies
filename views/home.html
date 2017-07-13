@@ -12,20 +12,32 @@
           </div>
             <div class="row">
                 <div class="col-sm-12" id="on">
-
+                    
                     <div class="cocktails_container">
                     
                     <div masonry column-width="25" masonry-options="{ transitionDuration: '1s' }">
                         <div class="masonry-brick" ng-repeat="cocktail in cocktails | filter: main.search" >
-                          <div class="cocktail" >
+                       
+                          <div class="cocktail" ng-click="main.itemClick(123)" >
+                            <div class="overlay">
+                              <button class="fa fa-edit fa-2x" ng-click="main.cocktailEdit()"></button>
+                              <div class="fa fa-trash fa-2x"></div>
+                            </div>
+
                             <div class="cover_image">
-                              <img ng-src="{{cocktail.pic_url}}" alt="A masonry brick" width="180px;" ng-show="cocktail.pic_url">
+                              <img ng-src="{{cocktail.pic_url}}" alt="A masonry brick" width="100%" ng-show="cocktail.pic_url">
+                              <input type="text" name="" id="drinkUrl_edit">
                               <div class="cocktail_text">
                               <h4 class="text-center">{{cocktail.drink_name}}</h4>
+                              <input type="text" name="" id="drinkTitle_edit">
                               <span class="badge" ng-repeat="ing in cocktail.ingredients track by $index">{{ ing }}</span>
+                              <tags-input ng-model="main.tags" name="tags" ng-required="true"></tags-input>
+                              <p>{{ cocktail.description }}</p>
+                              <textarea class="form-control" id="exampleTextarea"  rows="3" ng-required = "true" name="desc"></textarea>
                               </div>
                             </div>
                           </div>
+                  
                         </div>
                     </div>
                       

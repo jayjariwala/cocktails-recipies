@@ -7,15 +7,30 @@ app.config(function($routeProvider){
 		templateUrl : "views/home.html",
 		controller:"mainController as main"
 	})
+	.when('/edit',{
+		templateUrl : "views/item.html",
+		controller:"editController as edit"
+	})
 
 })
 
+app.controller("editController", function($routeParams){
+	console.log($routeParams);
+})
 
-app.controller("mainController",function($scope, $http, $firebaseArray){
+app.controller("mainController",function($scope, $http, $firebaseArray, $location){
 
 	var rec_cocktail = new Firebase('https://cocktails-394c7.firebaseio.com/');
 	$scope.cocktails = $firebaseArray(rec_cocktail);
 
+	/*this.itemClick = function(id)
+	{
+		$location.path('/edit/').search({id:'123'});
+	}*/
+	this.cocktailEdit = function()
+	{
+		console.log("edit");
+	}
 	/* $http({
 	 		method:'GET',
 	 		url:'https://cocktails-394c7.firebaseio.com/.json'
